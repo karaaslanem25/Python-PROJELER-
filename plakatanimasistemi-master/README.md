@@ -18,13 +18,6 @@ Bu proje, görüntülerden ve kameradan otomatik plaka tanıma işlemi yapan bir
 - NumPy
 - Tesseract OCR
 
-## Kurulum
-
-1. Tesseract OCR'yi [buradan](https://github.com/UB-Mannheim/tesseract/wiki) indirin ve kurun.
-2. Python bağımlılıklarını yükleyin:
-```
-pip install -r requirements.txt
-```
 
 ## Kullanım
 
@@ -49,8 +42,6 @@ Tarayıcınızda `http://localhost:5000` adresine giderek uygulamayı kullanabil
 - `basla.py`: Uygulama başlatıcı script
 - `templates/`: HTML şablonları
 - `Resim/`: Test görselleri ve yüklenen resimler
-- `requirements.txt`: Python bağımlılıkları
-- `NASIL_CALISTIRILIR.md`: Kurulum ve çalıştırma yönergeleri
 
 ## Son Güncelleme
 
@@ -71,7 +62,7 @@ Bu proje, kamera veya yüklenen görüntülerden araç plakalarını gerçek zam
 
 Sistem, canlı kamera görüntüsünü işleyebilir veya yüklenen plaka görsellerini analiz edebilir. Plakaları başarılı bir şekilde tanıyarak, güvenlik, otopark yönetimi veya trafik denetimi gibi alanlarda kullanılabilir.
 
-**Geliştirici:** Ertuğrul Deniz
+**Geliştirici:** Emirhan KARAASLAN 
 
 ## 🔧 Kullanılan Teknolojiler
 
@@ -81,52 +72,7 @@ Sistem, canlı kamera görüntüsünü işleyebilir veya yüklenen plaka görsel
 - **Flask**: Web arayüzü
 - **NumPy**: Matematiksel işlemler için
 
-## 🚀 Kurulum Adımları
-
-### Gereksinimler
-
-- Python 3.6 veya üzeri
-- Webcam (canlı tanıma için)
-- Windows için DirectShow desteği (kamera erişimi için)
-
-### 1. Projeyi İndirin
-
-```bash
-git clone https://github.com/ertugruldeniz/plakatanimasistemi.git
-cd plakatanimasistemi
-```
-
-### 2. Gereksinimleri Yükleyin
-
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Tesseract OCR Kurulumu
-
-**Windows için:**
-- [Tesseract OCR indirme sayfasından](https://github.com/UB-Mannheim/tesseract/wiki) en son sürümü indirin
-- Kurulumu tamamlayın (önerilen konum: `C:\Program Files\Tesseract-OCR\`)
-- Kurulum yolunu `web_app.py` dosyasında `pytesseract.pytesseract.tesseract_cmd` değişkenine otomatik tespit eder
-
-**Linux için:**
-```bash
-sudo apt-get update
-sudo apt-get install tesseract-ocr
-sudo apt-get install libtesseract-dev
-```
-
-### 4. Uygulamayı Başlatın
-
-```bash
-python basla.py
-# veya doğrudan
-python web_app.py
-```
-
-Uygulama http://localhost:5000 adresinde çalışacaktır.
-
-## 🔍 Nasıl Çalışır?
+## Nasıl Çalışır?
 
 Sistem aşağıdaki adımları izleyerek plakaları tespit eder ve okur:
 
@@ -145,6 +91,7 @@ Sistem aşağıdaki adımları izleyerek plakaları tespit eder ve okur:
    - Minimum alan 1000 piksel, maksimum 25000 piksel
    - Dikdörtgensellik oranı kontrolü
    - En iyi 15 kontur analizi
+     
 4. **OCR İşlemi**:
    - Plaka bölgesinin iki farklı yöntemle kırpılması
    - Boş görüntü kontrolü
@@ -152,6 +99,7 @@ Sistem aşağıdaki adımları izleyerek plakaları tespit eder ve okur:
    - Gürültü giderme için morfolojik açma
    - 3x ölçeklendirme
    - Tesseract OCR ile metin okuma
+     
 5. **Son İşlem**:
    - Özel karakterlerin ve boşlukların temizlenmesi
    - Sadece alfanümerik karakterlerin korunması ve büyük harfe dönüştürülmesi
@@ -190,16 +138,6 @@ Sistem aşağıdaki adımları izleyerek plakaları tespit eder ve okur:
 - 3 saniyelik timeout süresi eklenerek kamera açılışı güvenilir hale getirildi
 - Kontur tespiti için RETR_EXTERNAL yöntemi kullanıldı
 - Gelişmiş görüntü işleme parametreleri ile hassasiyet artırıldı
-
-## 🔄 Katkıda Bulunma
-
-Bu projeye katkıda bulunmak için:
-
-1. Bu depoyu forklayın
-2. Yeni bir branch oluşturun (`git checkout -b yenilik-ekle`)
-3. Değişikliklerinizi commit edin (`git commit -m 'Yeni özellik: Açıklama'`)
-4. Branch'inizi push edin (`git push origin yenilik-ekle`)
-5. Pull Request oluşturun
 
 ### Geliştirme Fikirleri
 
@@ -240,5 +178,4 @@ Bu projeye katkıda bulunmak için:
   - Şifrelenmiş veri depolama ve iletişim
 
 ## 📞 İletişim
-
-Ertuğrul Deniz
+Emirhan KARAASLAN - Büyük Veri Analisti
